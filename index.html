@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Corana Tracker</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <h2 class="h2"></h2>
+    <div class="boxes" >
+
+            <div class="box confirmed">
+              <h3>Confirmed</h3>
+              <h4>Loading...</h4>
+            </div>
+            <div class="box recovered">
+              <h3>Recovered</h3>
+              <h4>Loading...</h4>
+            </div>
+          <div class="box deaths">
+            <h3>Deaths</h3>
+            <h4>Loading...</h4>
+          </div>
+  </div>
+
+  <select name="country" id="country" >
+  <option value="">Global</option>
+  </select>
+  <div class="wrapper">
+    <canvas class="chart chartjs-render-monitor" id="myChart" width="400" height="400" ></canvas>
+
+  </div>
+  
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script src="app.js" charset="utf-8"></script>
+   
+    
+  </body>
+</html>
