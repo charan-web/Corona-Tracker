@@ -27,6 +27,7 @@ body{
     justify-content: space-around;
     align-items: center;
     height: 30%;
+    cursor: default;
 }
 .box{
    background-color: white;
@@ -42,25 +43,25 @@ body{
   color:orange;
 
     box-shadow: 0 5px 1px orange,
-                        1px -1px 0 rgb(243, 189, 12),
-                        -1px -1px 0 rgb(241, 226, 10);
+                        1px -1px 0 rgb(245, 244, 240),
+                        -1px -1px 0 rgb(247, 246, 241);
 
     transition: all .3s;
 
 }
 
 .recovered{
-    box-shadow: 0 5px 0 rgb(14, 153, 14),
-                        1px -1px 0 rgb(9, 129, 73),
-                        -1px -1px 0 rgb(12, 110, 45);
+    box-shadow: 0 5px 0 rgb(68, 216, 68),
+                        1px -1px 0 rgb(234, 240, 237),
+                        -1px -1px 0 rgb(198, 207, 201);
     transition:all .3s;
     color:green;
 }
 
 .deaths{
     box-shadow: 0 5px 0 red,
-                        1px -1px 0 rgb(160, 62, 5),
-                        -1px -1px 0 rgb(255, 20, 20);
+                        1px -1px 0 rgb(250, 249, 248),
+                        -1px -1px 0 rgb(245, 240, 240);
 
 
 transition:all .3s;
@@ -99,70 +100,109 @@ color:red;
   left:50%;
   transform:translate(-50%,-50%);
   outline: none;
+  cursor: pointer;
+ 
+  
 
 
 }
-#country option{
+option{
+  width:100%;
+  height: 100px;
   text-align:center;
-  background: lightgreen;
+  background: rgb(151, 213, 224);
   margin:50px;
   border-radius:10px;
-
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding:1em;
+  font-size: x-large;
+  text-transform: capitalize;
 }
 .wrapper{
   height: 400px !important;
   width:400px !important;
 }
-@media only screen and (max-width:600px){
-  body{
-    background-color:lightwhite;
-   
-  }
+
+
+
+ 
+
+/* Media Query for low resolution  Tablets, Ipads */ 
+@media (max-width: 1024px) { 
+  body { 
+      background-color: rgb(255, 255, 255); 
+  } 
   .boxes{
-    width:100%;
-  }
-  .box {
-    margin:auto;
-    padding:.5em;
-  }
-}
-@media only screen and (max-width:946px){
-  body{
-    background-color:lightwhite;
-  
-  }
-  .boxes{
-    width:100%;
-  }
-  .box {
-    margin:auto;
-    padding:.5em;
-  }
-}
-@media only screen and (max-width:480px){
-  body{
-    background-color:lightwhite;
-   
-    width:100%;
-  }
-  .boxes{
-    margin-top:50px;
     width:80%;
     display:flex;
+  }
+  .box{
+    margin:0 auto;
+    width:25%;
+  }
+} 
+
+
+
+
+/* Media Query for Tablets Ipads portrait mode */ 
+@media (min-width: 768px) and (max-width: 1023px){ 
+  body { 
+      background-color:rgb(255, 255, 255); 
+  } 
+  .boxes{
+    margin:200px  auto;
+    display:flex;
     flex-direction: column;
+    width:80%;
+    
   }
-  .box {
-    width:100%;
-    margin:20px auto;
-
+  .box{
+    margin:1em ;
+    width:60%;
+    padding:1.5em;
+    font-size: 2em;
+   
+  }
+  #country{
+    top:70%;
+  }
+  h6{
+    font-size: 2em;
+  }
+} 
+@media(min-width:1025) {
+  .boxes{
+    display:flex;
+    width:80%;
 
   }
-  #country {
-    position:absolute;
-    top:75%;
-    left:50%;
-    transform:translate(-50%,-50%);
+  box{
+    margin:0 auto;
+    width:25%;
   }
 }
 
+/* Media Query for Laptops and Desktops */ 
 
+ 
+
+h6{
+  position: absolute;
+  top:80%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:green;
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+
+ 
+ h6 span a{
+   text-decoration: none;
+   
+ }
+ h6 span{
+   text-decoration: underline;
+ }
